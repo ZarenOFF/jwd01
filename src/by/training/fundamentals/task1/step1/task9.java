@@ -27,16 +27,14 @@ public class task9 {
 
         int resultArray[] = new int[firstArray.length + secondArray.length];
 
-        for (int i = 0; i < delimiter; i++) {  //Заполняем первую половину
-            resultArray[i] = firstArray[i];
-        }
-        int index = 0;
-        for (int i = delimiter; i < secondArray.length + delimiter; i++, index++) {  //Вставляем второй массив
-            resultArray[i] = secondArray[index];
-        }
-        index = delimiter;
-        for (int i = secondArray.length - delimiter; i < resultArray.length; i++, index++) {  //Заполняем вторую половину первого
-            resultArray[i] = firstArray[index];
+        for (int i = 0; i < resultArray.length; i++) {
+            if (i < delimiter) {
+                resultArray[i] = firstArray[i];
+            } else if (i >= delimiter && i < secondArray.length + delimiter) {
+                resultArray[i] = secondArray[i - delimiter];
+            } else if (i>=secondArray.length){
+                resultArray[i] = firstArray[i - secondArray.length];
+            }
         }
         showArray(resultArray);
     }
