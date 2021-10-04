@@ -5,40 +5,40 @@ import java.util.Scanner;
 
 public class task9 {
     public static void main(String[] args) {
-        int k;
+        int delimiter;
         Random rand = new Random();
 
         System.out.println("Enter k");
-        k = enterNum();
+        delimiter = enterNum();
 
         System.out.println("Enter size of first array");
-        int arr1[] = new int[enterNum()];
+        int firstArray[] = new int[enterNum()];
         System.out.println("Enter size of second array");
-        int arr2[] = new int[enterNum()];
+        int secondArray[] = new int[enterNum()];
 
-        for (int i = 0; i < arr1.length; i++) {
-            arr1[i] = rand.nextInt(100);
+        for (int i = 0; i < firstArray.length; i++) {
+            firstArray[i] = rand.nextInt(100);
         }
-        showArr(arr1);
-        for (int i = 0; i < arr2.length; i++) {
-            arr2[i] = rand.nextInt(100);
+        showArray(firstArray);
+        for (int i = 0; i < secondArray.length; i++) {
+            secondArray[i] = rand.nextInt(100);
         }
-        showArr(arr2);
+        showArray(secondArray);
 
-        int resArr[] = new int[arr1.length + arr2.length];
+        int resultArray[] = new int[firstArray.length + secondArray.length];
 
-        for (int i = 0; i < k; i++) {  //Заполняем первую половину
-            resArr[i] = arr1[i];
+        for (int i = 0; i < delimiter; i++) {  //Заполняем первую половину
+            resultArray[i] = firstArray[i];
         }
         int index = 0;
-        for (int i = k; i < resArr.length - k; i++, index++) {  //Вставляем второй массив
-            resArr[i] = arr2[index];
+        for (int i = delimiter; i < secondArray.length + delimiter; i++, index++) {  //Вставляем второй массив
+            resultArray[i] = secondArray[index];
         }
-        index = k;
-        for (int i = resArr.length - k; i < resArr.length; i++, index++) {  //Заполняем вторую половину первого
-            resArr[i] = arr1[index];
+        index = delimiter;
+        for (int i = secondArray.length - delimiter; i < resultArray.length; i++, index++) {  //Заполняем вторую половину первого
+            resultArray[i] = firstArray[index];
         }
-        showArr(resArr);
+        showArray(resultArray);
     }
 
     private static int enterNum() {
@@ -51,7 +51,7 @@ public class task9 {
         return scan.nextInt();
     }
 
-    private static void showArr(int a[]) {
+    private static void showArray(int a[]) {
         for (int i = 0; i < a.length; i++) {
             System.out.print("[" + a[i] + "]");
         }

@@ -5,28 +5,25 @@ import java.util.Scanner;
 
 public class task8 {
     public static void main(String[] args) {
-        int n, k, sum = 0;
+        int arraySize, divider, sum = 0;
         Random rand = new Random();
 
         System.out.println("Enter size of array");
-        n = enterNum();
+        arraySize = enterNum();
         System.out.println("Enter K");
-        k = enterNum();
+        divider = enterNum();
 
-        int[] a = new int[n];
+        int[] array = new int[arraySize];
 
-        for (int i = 0; i < a.length; i++) {
-            a[i] = rand.nextInt(100);
-        }
-
-        for (int i = 0; i < a.length; i++) {
-            System.out.print("[" + a[i] + "]");
+        for (int i = 0; i < array.length; i++) {
+            array[i] = rand.nextInt(100);
+            System.out.print("[" + array[i] + "]");
         }
         System.out.println();
 
-        for (int i = 0; i < a.length; i++) {
-            if (a[i] % k == 0) {
-                sum += a[i];
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] % divider == 0) {
+                sum += array[i];
             }
         }
         System.out.println(sum);

@@ -28,12 +28,12 @@ public class task5 {
         return scan.nextDouble();
     }
 
-    private static double pow(double number) {
-        if(number>=0){
-            return Math.pow(number, 2);
+    private static double pow(double numberToPow) {
+        if(numberToPow>=0){
+            return Math.pow(numberToPow, 2);
         }
         else {
-            return Math.pow(number, 4);
+            return Math.pow(numberToPow, 4);
         }
     }
 }
