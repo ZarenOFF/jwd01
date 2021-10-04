@@ -4,17 +4,17 @@ import java.util.Scanner;
 
 public class task3 {
     public static void main(String[] args) {
-        double a, b, per, sq;
+        double legA, legB, perimeter, area;
 
         System.out.println("Enter a");
-        a = enterNum();
+        legA = enterNum();
         System.out.println("Enter b");
-        b = enterNum();
+        legB = enterNum();
 
-        per = Math.sqrt(Math.pow(a,2)+Math.pow(b,2)) + a +b;
-        System.out.println(per);
-        sq = (a*b)/2;
-        System.out.println(sq);
+        perimeter = Math.sqrt(Math.pow(legA,2)+Math.pow(legB,2)) + legA +legB;
+        System.out.println(perimeter);
+        area = (legA*legB)/2;
+        System.out.println(area);
 
     }
 

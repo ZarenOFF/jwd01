@@ -4,18 +4,18 @@ import java.util.Scanner;
 
 public class task5 {
     public static void main(String[] args) {
-        double a, b, c;
+        double firstNumber, secondNumber, thirdNumber;
 
-        System.out.println("Enter a");
-        a = enterNum();
-        System.out.println("Enter b");
-        b = enterNum();
-        System.out.println("Enter c");
-        c = enterNum();
+        System.out.println("Enter first number");
+        firstNumber = enterNum();
+        System.out.println("Enter second number");
+        secondNumber = enterNum();
+        System.out.println("Enter third number");
+        thirdNumber = enterNum();
 
-        System.out.println("a - " + pow(a));
-        System.out.println("b - " + pow(b));
-        System.out.println("c - " + pow(c));
+        System.out.println("First number after exponentiation - " + pow(firstNumber));
+        System.out.println("Second number after exponentiation - " + pow(secondNumber));
+        System.out.println("Third number after exponentiation - " + pow(thirdNumber));
     }
 
     private static double enterNum() {
@@ -28,12 +28,12 @@ public class task5 {
         return scan.nextDouble();
     }
 
-    private static double pow(double num) {
-        if(num>=0){
-            return Math.pow(num, 2);
+    private static double pow(double number) {
+        if(number>=0){
+            return Math.pow(number, 2);
         }
         else {
-            return Math.pow(num, 4);
+            return Math.pow(number, 4);
         }
     }
 }

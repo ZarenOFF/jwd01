@@ -9,26 +9,22 @@ import java.util.Scanner;
 
 public class task1 {
     public static void main(String[] args) {
-        int num, numOne, numTwo, numThree, numFour;
+        int number, digitOne, digitTwo, digitThree, digitFour;
         Scanner scan = new Scanner(System.in);
 
         System.out.print("Enter number\n>");
         while (!scan.hasNextInt()) {
             scan.nextLine();
-            System.out.println("Try again");
+            System.out.println("Wrong format. Try again");
         }
-        num = scan.nextInt();
+        number = scan.nextInt();
 
-        numOne = num / 1000;
-        //System.out.println(numOne);
-        numTwo = (num - numOne * 1000) / 100;
-        //System.out.println(numTwo);
-        numThree = (num - numOne * 1000 - numTwo * 100) / 10;
-        //System.out.println(numThree);
-        numFour = num % 10;
-        //System.out.println(numFour);
+        digitOne = number / 1000;
+        digitTwo = (number - digitOne * 1000) / 100;
+        digitThree = (number - digitOne * 1000 - digitTwo * 100) / 10;
+        digitFour = number % 10;
 
-        if (numOne + numTwo == numThree + numFour) {
+        if (digitOne + digitTwo == digitThree + digitFour) {
             System.out.println("true");
         } else {
             System.out.println("false");
