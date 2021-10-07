@@ -2,7 +2,7 @@ package by.training.fundamentals.task1.step1;
 
 import java.util.Scanner;
 
-public class task6 {
+public class Task6 {
     public static void main(String[] args) {
         int firstNumber, secondNumber, thirdNumber, sum;
 

@@ -7,7 +7,7 @@ package by.training.fundamentals.task1.step1;
 
 import java.util.Scanner;
 
-public class task1 {
+public class Task1 {
     public static void main(String[] args) {
         int number, digitOne, digitTwo, digitThree, digitFour;
         Scanner scan = new Scanner(System.in);

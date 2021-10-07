@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 /*Сформировать квадратную матрицу порядка n по заданному образцу(n - четное):*/
 
-public class task10 {
+public class Task10 {
     public static void main(String[] args) {
         int size;
 

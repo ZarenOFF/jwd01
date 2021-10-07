@@ -3,7 +3,7 @@ package by.training.fundamentals.task1.step1;
 import java.util.Random;
 import java.util.Scanner;
 
-public class task8 {
+public class Task8 {
     public static void main(String[] args) {
         int arraySize, divider, sum = 0;
         Random rand = new Random();
